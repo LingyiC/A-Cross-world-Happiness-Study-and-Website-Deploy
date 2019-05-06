@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>World Happiness Analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free HTML5 Website Template by ProBootstrap.com" />
+    <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="ProBootstrap.com" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+        <style>
+      .select-css {
+        display: block;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 700;
+        color: #444;
+        line-height: 1.3;
+        padding: .6em 1.4em .5em .8em;
+        width: 30%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #aaa;
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+        border-radius: .5em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #ffffff;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+      }
+    .select-css::-ms-expand {
+        display: none;
+    }
+    .select-css:hover {
+        border-color: #888;
+    }
+    .select-css:focus {
+        border-color: #aaa;
+        <!--box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);-->
+        <!--box-shadow: 0 0 0 3px -moz-mac-focusring;-->
+        color: #222;
+        outline: none;
+    }
+    .select-css option {
+        font-weight:normal;
+    }
+
+    .worldmap {
+        height: 600px;
+        width: 1500px;
+    }
+    </style>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <!--<script src="http://d3js.org/d3.v4.js"></script>-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  </head>
+  <body>
+    
+    <aside class="probootstrap-aside js-probootstrap-aside">
+      <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
+      <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+        
+        <a href="index.html" class="mb-2 d-block probootstrap-logo" style="color: #37bbff"> World Happiness </a>
+        <p class="mb-0"> Always keep an eye on the world happiness. </p>
+      </div>
+      <div class="probootstrap-overflow">
+        <nav class="probootstrap-nav">
+          <ul>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="index.html">Home</a></li>
+            <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="about.html">Visualization</a></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="services.html">Search</a></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="portfolio.html">Prediction</a></li>
+            <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="report/Proposal_for_Data_Science.pdf" download>Report</a></li>
+          </ul>
+        </nav>
+        <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+          <ul class="list-unstyled d-flex probootstrap-aside-social">
+            <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+            <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+            <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+          </ul>
+        </footer>
+      </div>
+    </aside>
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main">
+      <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></a></div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-8 mx-auto">
+                <h2 class="h1 mb-5 mt-0">Visualization and Analyzation</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <select id = "visualize" class="select-css" onChange="OnSelectedIndexChange()">
+            <option value="1"> Main </option>
+            <option value="2"> General Information </option>
+            <option value="3"> Economy Influence </option>
+            <option value="4"> Other Influence </option>
+          </select>
+        </div>
+
+        <div id="vis-result" class="row mb-5">
+          <!--<img src="image/visualization/10_region.png"> <br>-->
+          <!--<img src="image/visualization/wordcloud.png"> <br>-->
+          <div id="worldmap" class="row mb-5 worldmap"></div>
+        </div>
+        <br>
+
+        <div id="vis-result2" class="row"></div> <br>
+        <div id="vis-result3" class="row"></div> <br>
+
+        <br>
+        <div id="vis-economy" class="row mb-5"></div>
+        <br><br>
+
+      </div>
+
+      <div class="container-fluid d-md-none">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled d-flex probootstrap-aside-social">
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script>
+
+      Plotly.d3.csv('data/2018.csv', function(err, rows){
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
+      console.log(unpack(rows, 'postal'));
+      var data = [{
+                  type: 'choropleth',
+                  locationmode: 'country names',
+                  locations: unpack(rows, 'Country'),
+                  z: unpack(rows, 'Rank'),
+                  text: unpack(rows, 'Score'),
+                  autocolorscale: true
+              }];
+
+      var layout = {
+              title: 'World Happiness Rank in 2018',
+              geo: {
+                projection: {
+                  type: 'robinson'
+                }
+              }
+          };
+          Plotly.plot(worldmap, data, layout, {showLink: false});
+      });
+
+      function OnSelectedIndexChange()
+        {
+        var img = document.createElement("img");
+        var img2 = document.createElement("img");
+        var img3 = document.createElement("img");
+        var img4 = document.createElement("img");
+        var img5 = document.createElement("img");
+
+        var img_e1 = document.createElement("img");
+        var img_e2 = document.createElement("img");
+        var img_e3 = document.createElement("img");
+        var img_e4 = document.createElement("img");
+        var img_e5 = document.createElement("img");
+        var img_e6 = document.createElement("img");
+
+        var result = document.getElementById("vis-result");
+        var result2 = document.getElementById("vis-result2");
+        var result3 = document.getElementById("vis-result3");
+        var res_economy = document.getElementById("vis-economy");
+
+        if (document.getElementById('visualize').value == "1"){
+          $('#vis-result').empty();
+          $('#vis-result2').empty();
+          $('#vis-result3').empty();
+          $('#vis-economy').empty();
+          <!--img.src = "image/visualization/10_region.png";-->
+          <!--result.appendChild(img);-->
+          <!--result2.appendChild(img2);-->
+        }
+        else if (document.getElementById('visualize').value == "2"){
+          $('#vis-result').empty();
+          $('#vis-result2').empty();
+          $('#vis-result3').empty();
+          $('#vis-economy').empty();
+          img.src = "image/visualization/happiness_rate.png";
+          img2.src = "image/visualization/percentage.png";
+          img3.src = "image/visualization/10_region.png";
+          <!--result.appendChild(img);-->
+          <!--img3.src = "image/visualization/factors.png";-->
+          result.appendChild(img3);
+          result2.appendChild(img);
+          result3.appendChild(img2);
+        }
+        else if (document.getElementById('visualize').value == "3"){
+          img.src = "image/visualization/happiness_economy2016.png";
+          img2.src = "image/visualization/happiness_economy.jpg";
+          img3.src = "image/visualization/correlation.png";
+          img4.src = "image/visualization/happiness_economy2017.png";
+          img5.src = "image/visualization/happiness_economy2018.png";
+
+          $('#vis-result').empty();
+          $('#vis-result2').empty();
+          $('#vis-result3').empty();
+          $('#vis-economy').empty();
+
+          result.appendChild(img);
+          result.appendChild(img4);
+          result.appendChild(img5);
+
+          result2.appendChild(img3);
+          result3.appendChild(img2);
+
+          img_e1.src = "image/visualization/health_economy.png";
+          res_economy.appendChild(img_e1);
+          res_economy.append('1. Economy will affect the fundamental medical instrument in that country.   2. Economic opportunity motivates and enables people to invest in their health; its absence does the reverse.   3. Small policy details have large economic impacts on insurance coverage and costs.');
+          img_e2.src = "image/visualization/family_economy.png";
+          res_economy.appendChild(img_e2);
+          img_e3.src = "image/visualization/freedom_economy.png";
+          res_economy.appendChild(img_e3);
+          img_e4.src = "image/visualization/generosity_economy.png";
+          res_economy.appendChild(img_e4);
+          img_e5.src = "image/visualization/trust_economy.png";
+          res_economy.appendChild(img_e5);
+          img_e6.src = "image/visualization/dystopia_economy.png";
+          res_economy.appendChild(img_e6);
+        }
+        else if (document.getElementById('visualize').value == "4"){
+          img.src = "image/visualization/health_family.png";
+          img2.src = "image/visualization/relationship_violin.png";
+          img3.src = "image/visualization/correlation_scatter.png";
+
+          $('#vis-result').empty();
+          $('#vis-result2').empty();
+          $('#vis-result3').empty();
+          $('#vis-economy').empty();
+          result.appendChild(img);
+          result2.appendChild(img2);
+          result3.appendChild(img3);
+        }
+      }
+    </script>
+    
+  </body>
+</html>
